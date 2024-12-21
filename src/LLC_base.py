@@ -42,13 +42,16 @@ class LLC:
         self.Cr = 1 / (self.Qmax * self.Rac_min * 2 * math.pi * self.fr)
         self.Lm = self.k * self.Lr
 
+    # 如何去计算时域表达式
+
     def output(self):
-        print(f'Gmax is {self.Gmax}.')
-        print(f'Gmin is {self.Gmin}.')
-        print(f'Qmax is {self.Qmax}.')
-        print(f'Lr is {self.Lr} H.')
-        print(f'Cr is {self.Cr} F.')
-        print(f'Lm is {self.Lm} H.')
+        print(f'transformer ratio is {self.np2s :.2f}.')
+        print(f'Gmax is {self.Gmax :.2f}.')
+        print(f'Gmin is {self.Gmin :.2f}.')
+        print(f'Qmax is {self.Qmax :.2f}.')
+        print(f'Lr is {1e6*self.Lr :.2f} uH.')
+        print(f'Cr is {1e6*self.Cr :.2f} uF.')
+        print(f'Lm is {1e6*self.Lm :.2f} uH.')
 
 # 做一个参数输入的交互
 Vin_n = float(input('Please input the nominal input voltage (V): '))
